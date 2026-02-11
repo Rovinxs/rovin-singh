@@ -1,0 +1,27 @@
+/* Base Styling */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #fafafa;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #0f172a;
+}
+
+a {
+  transition: color 0.15s ease;
+}
+
+/* Heading Font */
+.font-heading {
+  font-family: 'Source Serif 4', Georgia, serif;
+}

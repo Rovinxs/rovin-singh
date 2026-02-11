@@ -41,8 +41,10 @@ const server = http.createServer((req, res) => {
   // Resolve file path
   let filePath = path.join(DIST, urlPath);
 
-  // If no extension, try .html (clean URLs)
-  if (!path.extname(filePath)) {
+  // If it's root or no extension, try index.html or append .html
+  if (urlPath === '/' || urlPath === '') {
+    filePath = path.join(DIST, 'index.html');
+    } else if (!path.extname(filePath)) {
     filePath = filePath + '.html';
   }
 

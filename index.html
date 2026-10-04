@@ -145,7 +145,7 @@
 
         /* Credentials strip */
         .creds { position: relative; z-index: 2; margin-top: -64px; }
-        .creds-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); display: grid; grid-template-columns: repeat(4, 1fr); }
+        .creds-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); display: grid; grid-template-columns: repeat(3, 1fr); }
         .cred { padding: 24px 22px; border-right: 1px solid var(--line); }
         .cred:last-child { border-right: 0; }
         .cred .num { font-family: var(--serif); font-size: 1.9rem; font-weight: 700; color: var(--ink); line-height: 1.1; }
@@ -160,13 +160,17 @@
         .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
 
         /* Ventures */
-        .ventures { display: grid; grid-template-columns: 1.15fr 1fr; gap: 20px; }
+        .ventures { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .venture.featured { grid-column: 1 / -1; }
+        .venture.featured .venture-body { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: start; }
         .venture { padding: 30px; display: flex; flex-direction: column; gap: 14px; }
         .venture.featured { background: linear-gradient(160deg, #ffffff 0%, var(--gold-soft) 100%); border-color: #efe0c4; }
         .venture-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
         .venture-logo { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; font-family: var(--serif); font-weight: 700; font-size: 20px; color: #fff; }
         .venture-logo.dv { background: linear-gradient(135deg, var(--navy), var(--blue)); }
         .venture-logo.sj { background: linear-gradient(135deg, #b45309, #d97706); }
+        .venture-logo.rto { background: linear-gradient(135deg, #0f766e, #14b8a6); }
+        .venture-logo.did { background: linear-gradient(135deg, #5b21b6, #8b5cf6); }
         .tag { font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: var(--blue-soft); color: var(--blue); white-space: nowrap; }
         .tag.gold { background: #f6e9cf; color: #7c5414; }
         .venture h3 { font-family: var(--serif); font-size: 1.45rem; }
@@ -254,10 +258,7 @@
         @media (max-width: 900px) {
             .hero-grid { grid-template-columns: 1fr; gap: 44px; }
             .portrait { justify-self: center; max-width: 300px; }
-            .creds-card { grid-template-columns: repeat(2, 1fr); }
-            .cred:nth-child(2) { border-right: 0; }
-            .cred:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-            .ventures, .about, .cta { grid-template-columns: 1fr; }
+            .ventures, .about, .cta, .venture.featured .venture-body { grid-template-columns: 1fr; }
             .grid-4 { grid-template-columns: repeat(2, 1fr); }
             .principles { grid-template-columns: 1fr; }
             .tl { grid-template-columns: 1fr; gap: 22px; }
@@ -270,7 +271,9 @@
             .portrait-badge { left: 50%; transform: translateX(-50%); bottom: -20px; white-space: nowrap; }
             .portrait::before { display: none; }
             .grid-4 { grid-template-columns: 1fr; }
-            .cred { padding: 18px 16px; }
+            .creds-card { grid-template-columns: 1fr; }
+            .cred { padding: 18px 20px; border-right: 0; border-bottom: 1px solid var(--line); }
+            .cred:last-child { border-bottom: 0; }
             .cred .num { font-size: 1.55rem; }
             .venture, .timeline { padding: 24px 20px; }
             .post { grid-template-columns: 1fr; gap: 14px; padding: 22px 20px; }
@@ -311,7 +314,7 @@
                     <p class="hero-lead">
                         Founder &amp; Director of <strong style="color:#fff;font-weight:600">DigiVill Tech LLP</strong> (est. 2024) and founder of
                         <strong style="color:#fff;font-weight:600">SarkariJob.com</strong>. A former BSF personnel who cleared SSC GD 2018 — now building
-                        technology and trustworthy content for millions of government job aspirants across India.
+                        technology and trustworthy digital platforms for people across India.
                     </p>
                     <div class="hero-actions">
                         <a href="#contact" class="btn btn-primary">
@@ -349,7 +352,6 @@
             <div class="creds-card">
                 <div class="cred"><div class="num">2024</div><div class="lbl">Founded DigiVill Tech LLP</div></div>
                 <div class="cred"><div class="num">7+ yrs</div><div class="lbl">In digital publishing</div></div>
-                <div class="cred"><div class="num">1L+</div><div class="lbl">Monthly readers</div></div>
                 <div class="cred"><div class="num">500+</div><div class="lbl">Articles written</div></div>
             </div>
         </div>
@@ -369,17 +371,21 @@
                             <span class="venture-logo dv" aria-hidden="true">D</span>
                             <span class="tag gold">Est. 2024</span>
                         </div>
+                        <div class="venture-body">
+                        <div>
                         <h3>DigiVill Tech LLP</h3>
                         <p class="role">Founder &amp; Director <span>· 2024 – Present</span></p>
-                        <p>
+                        <p style="margin-top:10px">
                             I started DigiVill Tech LLP in 2024 and currently serve as its Director. The company brings together
                             technology, content and digital publishing experience to build reliable, accessible products.
                         </p>
+                        </div>
                         <ul>
                             <li>Leading company strategy and operations</li>
                             <li>Building digital platforms and publishing products</li>
                             <li>Content, SEO and growth expertise in-house</li>
                         </ul>
+                        </div>
                     </article>
                     <article class="card venture">
                         <div class="venture-top">
@@ -389,14 +395,35 @@
                         <h3>SarkariJob.com</h3>
                         <p class="role">Founder &amp; Lead Writer</p>
                         <p>
-                            A government jobs platform publishing verified job notifications, exam updates, syllabus breakdowns
-                            and preparation strategies — written from an aspirant's perspective.
+                            Government job notifications, exam updates, syllabus breakdowns and preparation strategies — written from an aspirant's perspective.
                         </p>
-                        <ul>
-                            <li>Authentic, source-checked notifications</li>
-                            <li>Exam guides for SSC, Railway, Police &amp; more</li>
-                        </ul>
                         <a class="link" href="https://www.sarkarijob.com/" target="_blank" rel="noopener">Visit SarkariJob.com
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg>
+                        </a>
+                    </article>
+                    <article class="card venture">
+                        <div class="venture-top">
+                            <span class="venture-logo rto" aria-hidden="true">M</span>
+                            <span class="tag">RTO &amp; vehicles</span>
+                        </div>
+                        <h3>MyRTOBuddy.com</h3>
+                        <p>
+                            An online platform that makes RTO and vehicle-related information simple and easy to find.
+                        </p>
+                        <a class="link" href="https://myrtobuddy.com/" target="_blank" rel="noopener">Visit MyRTOBuddy.com
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg>
+                        </a>
+                    </article>
+                    <article class="card venture">
+                        <div class="venture-top">
+                            <span class="venture-logo did" aria-hidden="true">D</span>
+                            <span class="tag">Digital ID</span>
+                        </div>
+                        <h3>DigiIDNow.com</h3>
+                        <p>
+                            A platform focused on digital identity and document services, explained in clear, simple language.
+                        </p>
+                        <a class="link" href="https://digiidnow.com/" target="_blank" rel="noopener">Visit DigiIDNow.com
                             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg>
                         </a>
                     </article>
@@ -468,7 +495,7 @@
                         <li><div class="yr">2018</div><p>Cleared SSC GD and was selected for the Border Security Force</p></li>
                         <li><div class="yr">2019</div><p>Moved full-time into government job content</p></li>
                         <li><div class="yr">2024</div><p>Started DigiVill Tech LLP as Founder &amp; Director</p></li>
-                        <li class="now"><div class="yr">Today</div><p>Leading DigiVill Tech LLP and growing SarkariJob.com</p></li>
+                        <li class="now"><div class="yr">Today</div><p>Leading DigiVill Tech LLP and growing SarkariJob.com, MyRTOBuddy.com &amp; DigiIDNow.com</p></li>
                     </ol>
                 </div>
             </div>
@@ -593,6 +620,8 @@
                 <a href="https://x.com/rovinsinghs" target="_blank" rel="noopener noreferrer">X</a>
                 <a href="https://www.instagram.com/rovins._" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://www.sarkarijob.com/" target="_blank" rel="noopener">SarkariJob.com</a>
+                <a href="https://myrtobuddy.com/" target="_blank" rel="noopener">MyRTOBuddy.com</a>
+                <a href="https://digiidnow.com/" target="_blank" rel="noopener">DigiIDNow.com</a>
             </nav>
         </div>
     </footer>

@@ -84,6 +84,8 @@ a.venture:hover { border-color: #cbd5e1; }
 .venture small { color: var(--accent); font-size: 12.5px; font-weight: 600; }
 .venture p { margin-top: 4px; font-size: 14px; }
 .venture .ext { margin-left: auto; color: var(--muted); font-size: 14px; }
+.venture .ext-li { flex: 0 0 auto; color: #0a66c2; }
+.venture .ext-li svg { width: 18px; height: 18px; display: block; }
 
 /* About + facts */
 .about { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; align-items: start; }

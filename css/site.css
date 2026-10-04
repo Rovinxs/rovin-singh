@@ -37,7 +37,12 @@ em, i, cite, address, dfn, var { font-style: normal; }
 .nav-links { display: flex; gap: 2px; }
 .nav-links a { padding: 8px 12px; border-radius: 8px; color: var(--body); font-size: 14px; font-weight: 500; text-decoration: none; }
 .nav-links a:hover { color: var(--ink); background: #eef2f6; }
-@media (max-width: 680px) { .nav-links a:not(:last-child) { display: none; } }
+@media (max-width: 680px) {
+    .nav .wrap { gap: 8px; }
+    .nav-links { gap: 0; }
+    .nav-links a { padding: 8px 9px; font-size: 14px; }
+}
+@media (max-width: 480px) { .brand-name { display: none; } }
 
 /* Buttons, chips, tags */
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink); font-size: 14.5px; font-weight: 600; text-decoration: none; transition: background .15s, border-color .15s; }

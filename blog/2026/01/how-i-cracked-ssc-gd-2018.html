@@ -16,11 +16,11 @@
     <meta property="article:modified_time" content="2026-10-04" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@rovinsinghs" />
-    <meta name="theme-color" content="#0f1f3a" />
+    <meta name="theme-color" content="#f8fafc" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -95,163 +95,7 @@
     ]
 }
     </script>
-    <style>
-        :root {
-            --navy: #0f1f3a;
-            --navy-2: #1a2f52;
-            --ink: #16233a;
-            --body: #3f4e65;
-            --muted: #6b7a90;
-            --line: #e2e8f0;
-            --bg: #f6f8fb;
-            --card: #ffffff;
-            --blue: #1d4f91;
-            --blue-soft: #eef4fc;
-            --gold: #b7802f;
-            --gold-soft: #fbf5ea;
-            --radius: 18px;
-            --shadow: 0 1px 2px rgba(15, 31, 58, .04), 0 10px 30px rgba(15, 31, 58, .06);
-            --serif: "Source Serif 4", Georgia, serif;
-            --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-        }
-        *, *::before, *::after { box-sizing: border-box; }
-        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-        body { margin: 0; font-family: var(--sans); color: var(--body); background: var(--bg); line-height: 1.65; font-size: 16px; -webkit-font-smoothing: antialiased; }
-        img { max-width: 100%; display: block; }
-        a { color: var(--blue); }
-        a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
-        h1, h2, h3, h4 { color: var(--ink); margin: 0; line-height: 1.25; }
-        p { margin: 0; }
-        .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
-        .narrow { max-width: 760px; margin: 0 auto; padding: 0 20px; }
-        .skip { position: absolute; left: -9999px; }
-        .skip:focus { left: 16px; top: 16px; z-index: 50; background: #fff; padding: 8px 12px; }
-
-        /* Nav (same as homepage) */
-        .nav { position: sticky; top: 0; z-index: 20; background: rgba(15, 31, 58, .92); backdrop-filter: saturate(160%) blur(10px); -webkit-backdrop-filter: saturate(160%) blur(10px); border-bottom: 1px solid rgba(255,255,255,.06); }
-        .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 16px; }
-        .brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 600; letter-spacing: -.01em; }
-        .brand-mark { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; background: linear-gradient(135deg, var(--gold), #d9a95a); color: var(--navy); font-family: var(--serif); font-weight: 700; font-size: 15px; }
-        .nav-links { display: flex; gap: 4px; }
-        .nav-links a { color: #c9d4e5; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 12px; border-radius: 8px; }
-        .nav-links a:hover { color: #fff; background: rgba(255,255,255,.07); }
-        .nav-cta { color: var(--navy) !important; background: #fff; }
-        .nav-cta:hover { background: #eef2f8 !important; }
-        @media (max-width: 720px) { .nav-links a:not(.nav-cta) { display: none; } }
-
-        /* Article hero */
-        .hero { position: relative; background: radial-gradient(1000px 420px at 85% -10%, #284a7e 0%, transparent 60%), linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%); color: #c9d4e5; padding: 44px 0 110px; overflow: hidden; }
-        .hero::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 44px 44px; mask-image: linear-gradient(180deg, #000 0%, transparent 85%); -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 85%); pointer-events: none; }
-        .hero .narrow { position: relative; z-index: 1; }
-        .crumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.5px; color: #9fb0c8; margin-bottom: 22px; }
-        .crumbs a { color: #c9d4e5; text-decoration: none; }
-        .crumbs a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
-        .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
-        .pill { font-size: 12.5px; font-weight: 600; padding: 5px 11px; border-radius: 999px; background: rgba(215, 168, 90, .16); color: #f1d9ae; border: 1px solid rgba(215, 168, 90, .3); }
-        .hero h1 { font-family: var(--serif); color: #fff; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.12; letter-spacing: -.025em; }
-        .deck { margin-top: 18px; font-size: 1.12rem; color: #c3cfe1; max-width: 62ch; line-height: 1.7; }
-        .byline { display: flex; align-items: center; gap: 14px; margin-top: 30px; }
-        .byline img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid rgba(255,255,255,.25); }
-        .byline a { color: #fff; font-weight: 600; text-decoration: none; }
-        .byline a:hover { text-decoration: underline; text-underline-offset: 3px; }
-        .byline .role { font-size: 13.5px; color: #f1d9ae; }
-        .byline .meta { font-size: 13px; color: #9fb0c8; margin-top: 2px; }
-
-        /* Article body */
-        .sheet { position: relative; z-index: 2; margin-top: -70px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow); padding: clamp(26px, 6vw, 56px); }
-        .content { font-size: 1.07rem; line-height: 1.85; }
-        .content > * + * { margin-top: 1.25rem; }
-        .content p { color: var(--body); }
-        .content strong { color: var(--ink); font-weight: 600; }
-        .content em { color: var(--ink); }
-        .content h2 { font-family: var(--serif); font-size: clamp(1.45rem, 3vw, 1.75rem); letter-spacing: -.015em; margin-top: 2.8rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
-        .content h3 { font-size: 1.15rem; font-weight: 600; margin-top: 2rem; }
-        .content a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-        .lead { font-size: 1.15rem; color: var(--ink) !important; padding: 20px 22px; border-radius: 14px; background: var(--blue-soft); border-left: 3px solid var(--blue); }
-        .content blockquote { margin: 2rem 0; padding: 22px 26px; border-radius: 14px; background: var(--gold-soft); border-left: 3px solid var(--gold); position: relative; }
-        .content blockquote p { font-family: var(--serif); font-style: italic; font-size: 1.25rem; line-height: 1.5; color: var(--ink); }
-        .career-note { margin: 2.6rem 0 !important; padding: clamp(22px, 4vw, 32px); border-radius: 16px; background: linear-gradient(160deg, var(--navy), var(--navy-2)); color: #c9d4e5; }
-        .career-note .kicker { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #e2b86f; }
-        .career-note h2 { color: #fff; margin: 8px 0 12px !important; padding-top: 0 !important; border-top: 0 !important; }
-        .career-note p { color: #c9d4e5 !important; }
-        .career-note strong { color: #fff !important; }
-        .career-note a { color: #f1d9ae !important; }
-        .lessons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 1.6rem 0 2rem !important; }
-        .lesson { padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: #fbfcfe; }
-        .lesson .n { font-family: var(--serif); font-weight: 700; color: var(--gold); font-size: 14px; }
-        .lesson h4 { font-size: 1rem; margin: 6px 0 4px; }
-        .lesson p { font-size: 14.5px; line-height: 1.6; }
-
-        .glance { margin: 1.8rem 0 !important; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-        .glance h2 { margin: 0 !important; padding: 14px 20px !important; border-top: 0 !important; font-family: var(--sans) !important; font-size: 13px !important; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted) !important; background: #fbfcfe; border-bottom: 1px solid var(--line); }
-        .glance dl { margin: 0; display: grid; grid-template-columns: auto 1fr; }
-        .glance dt, .glance dd { margin: 0; padding: 10px 20px; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.55; }
-        .glance dt { font-weight: 600; color: var(--ink); white-space: nowrap; }
-        .glance dl > :nth-last-child(-n+2) { border-bottom: 0; }
-        .toc { margin: 1.8rem 0 !important; padding: 18px 22px; border-radius: 14px; background: #fbfcfe; border: 1px solid var(--line); }
-        .toc summary { cursor: pointer; font-weight: 700; color: var(--ink); font-size: 15px; }
-        .toc ol { margin: 12px 0 0; padding-left: 20px; display: grid; gap: 6px; font-size: 15px; line-height: 1.5; }
-        .toc a { text-decoration: none; }
-        .toc a:hover { text-decoration: underline; }
-        .content h2[id] { scroll-margin-top: 80px; }
-        .faq details { border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; background: #fbfcfe; }
-        .faq details + details { margin-top: 10px; }
-        .faq summary { cursor: pointer; font-weight: 600; color: var(--ink); line-height: 1.5; }
-        .faq details p { margin-top: 8px; font-size: 15.5px; }
-        .share { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-        .share span { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
-        .share a, .share button { font: inherit; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 10px; border: 1px solid var(--line); background: #fff; color: var(--ink); text-decoration: none; cursor: pointer; }
-        .share a:hover, .share button:hover { border-color: #c9d6e8; background: var(--blue-soft); }
-
-        /* After article */
-        .after { margin-top: 40px; display: grid; gap: 20px; }
-        .tags h3 { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
-        .tags div { display: flex; flex-wrap: wrap; gap: 8px; }
-        .tags span { font-size: 13.5px; padding: 6px 12px; border-radius: 8px; background: #fff; border: 1px solid var(--line); color: var(--ink); }
-        .note { display: flex; gap: 12px; padding: 16px 18px; border: 1px solid #efe0c4; border-radius: 14px; background: var(--gold-soft); font-size: 14.5px; line-height: 1.65; }
-        .note svg { flex: 0 0 20px; width: 20px; height: 20px; color: var(--gold); margin-top: 2px; }
-        .note strong { color: var(--ink); }
-        .author { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; padding: 26px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
-        .author img { width: 96px; height: 96px; border-radius: 18px; object-fit: cover; object-position: center 20%; }
-        .author .kick { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
-        .author h3 { font-family: var(--serif); font-size: 1.3rem; margin: 4px 0 2px; }
-        .author .role { font-size: 14px; font-weight: 600; color: var(--ink); }
-        .author p.bio { font-size: 14.5px; margin-top: 8px; line-height: 1.65; }
-        .author .links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 12px; font-size: 14px; font-weight: 600; }
-        .author .links a { text-decoration: none; }
-        .author .links a:hover { text-decoration: underline; text-underline-offset: 3px; }
-        .back { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; text-decoration: none; }
-        .back:hover { text-decoration: underline; text-underline-offset: 4px; }
-        .back svg { width: 18px; height: 18px; }
-
-        footer.site { margin-top: 56px; padding: 28px 0 40px; border-top: 1px solid var(--line); }
-        footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: var(--muted); }
-        footer.site a { color: var(--muted); text-decoration: none; }
-        footer.site a:hover { color: var(--ink); }
-        footer.site nav { display: flex; gap: 4px 18px; flex-wrap: wrap; }
-
-        @media (max-width: 640px) {
-            .hero { padding: 32px 0 96px; }
-            .narrow { padding: 0 16px; }
-            .sheet { border-radius: 16px; padding: 22px 18px; }
-            .lead { font-size: 1.04rem; padding: 16px; }
-            .content blockquote { padding: 16px 18px; }
-            .content blockquote p { font-size: 1.12rem; }
-            .career-note { padding: 20px; }
-            .lesson { padding: 16px; }
-            .glance dt, .glance dd { padding-left: 16px; padding-right: 16px; }
-            .toc { padding: 14px 16px; }
-            .toc ol a, .author .links a, footer.site nav a { display: inline-block; padding: 4px 0; }
-            .content { font-size: 1.02rem; }
-            .lessons { grid-template-columns: 1fr; }
-            .author { grid-template-columns: 1fr; padding: 22px 20px; }
-            .author img { width: 76px; height: 76px; }
-            .glance dl { grid-template-columns: 1fr; }
-            .glance dt { padding-bottom: 0; border-bottom: 0; }
-            .glance dd { padding-top: 2px; }
-        }
-        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-    </style>
+    <link rel="stylesheet" href="/css/site.css" />
 </head>
 <body>
     <a class="skip" href="#article">Skip to article</a>
@@ -260,41 +104,37 @@
         <div class="wrap">
             <a href="/" class="brand" aria-label="Rovin Singh — Home"><span class="brand-mark">RS</span> Rovin Singh</a>
             <nav class="nav-links" aria-label="Primary">
-                <a href="/#ventures">Work</a>
                 <a href="/#about">About</a>
-                <a href="/#journey">Journey</a>
+                <a href="/#work">Work</a>
                 <a href="/#articles">Articles</a>
-                <a href="/#contact" class="nav-cta">Contact</a>
+                <a href="/#contact">Contact</a>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        <!-- Article header -->
-        <section class="hero">
-            <div class="narrow">
+        <div class="narrow">
+            <header class="card article-head">
                 <nav class="crumbs" aria-label="Breadcrumb">
                     <a href="/">Home</a><span aria-hidden="true">/</span><a href="/#articles">Articles</a><span aria-hidden="true">/</span><span>SSC GD 2018</span>
                 </nav>
-                <div class="pill-row"><span class="pill">Success Story</span><span class="pill">SSC GD</span></div>
+                <div class="tags-row"><span class="tag">Success Story</span><span class="tag">SSC GD</span></div>
                 <h1>How I Cracked SSC GD 2018: My Complete Journey From Private School Teacher to BSF</h1>
                 <p class="deck">
                     Cracking a government exam takes more than books and coaching. It takes patience, consistency
                     and self-belief. This is how I did it.
                 </p>
                 <div class="byline">
-                    <img src="/images/rovin-singh.jpeg" alt="Rovin Singh" width="48" height="48" />
+                    <img src="/images/rovin-singh.jpeg" alt="Rovin Singh" width="44" height="44" />
                     <div>
                         <a href="/">Rovin Singh</a>
                         <div class="role">Co-Founder, DigiVill Tech LLP · Former BSF</div>
                         <div class="meta"><time datetime="2026-01-31">January 31, 2026</time> · 5 min read · Updated <time datetime="2026-10-04">October 4, 2026</time></div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </header>
 
-        <div class="narrow">
-            <article class="sheet content" id="article">
+            <article class="card sheet content" id="article">
                 <p class="lead">
                     This is for every aspirant who thinks <em>"I'm too late"</em>,
                     <em>"My family's financial situation isn't great"</em>, <em>"I don't have enough resources"</em> or
@@ -498,7 +338,7 @@
                     <span><strong>About this account:</strong> This article reflects Rovin’s personal experience. Recruitment rules and exam details can change, so check the latest notices on the relevant official website before making decisions.</span>
                 </p>
 
-                <aside class="author" aria-label="About the author">
+                <aside class="card author" aria-label="About the author">
                     <img src="/images/rovin-singh.jpeg" alt="Rovin Singh" width="96" height="96" loading="lazy" />
                     <div>
                         <div class="kick">Written by</div>
@@ -526,7 +366,7 @@
         </div>
     </main>
 
-    <footer class="site">
+    <footer class="site-footer">
         <div class="wrap">
             <p>© 2026 Rovin Singh · Co-Founder, DigiVill Tech LLP</p>
             <nav aria-label="Footer">

@@ -122,7 +122,6 @@ a.venture:hover { border-color: #cbd5e1; }
 .contact cite { display: block; margin-top: 8px; font-size: 14px; font-style: normal; color: var(--muted); }
 .contact h3 { font-size: 17px; margin-bottom: 4px; }
 .contact p { font-size: 14.5px; margin-bottom: 14px; }
-.contact .mail { display: block; margin-top: 10px; font-size: 14px; word-break: break-all; }
 
 /* Footer */
 .site-footer { margin-top: 56px; padding: 24px 0 36px; border-top: 1px solid var(--line); }

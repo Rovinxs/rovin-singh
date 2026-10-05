@@ -15,7 +15,7 @@
     --heading: "Sora", "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; -webkit-text-size-adjust: 100%; }
 body { margin: 0; font-family: var(--sans); font-size: 16px; line-height: 1.65; color: var(--body); background: var(--bg); -webkit-font-smoothing: antialiased; }
 img { display: block; max-width: 100%; }
 a { color: var(--accent); }
@@ -158,7 +158,7 @@ a.venture:hover { border-color: #cbd5e1; }
 .content strong { font-weight: 600; }
 .content h2 { font-size: clamp(1.3rem, 2.8vw, 1.55rem); margin-top: 2.4rem; }
 .content h3 { font-size: 1.12rem; margin-top: 1.8rem; }
-.content h2[id] { scroll-margin-top: 80px; }
+.content h2[id] { scroll-margin-top: 20px; }
 .content a { text-underline-offset: 3px; }
 .lead { padding: 16px 18px; border-radius: 12px; background: var(--accent-soft); color: var(--ink); }
 .content blockquote { margin: 1.6rem 0; padding: 4px 0 4px 18px; border-left: 3px solid var(--accent); }

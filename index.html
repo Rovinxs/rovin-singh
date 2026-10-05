@@ -24,20 +24,50 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "ProfilePage",
+            "@id": "https://rovinsingh.com/#profilepage",
+            "url": "https://rovinsingh.com/",
+            "name": "Rovin Singh — Co-Founder, DIGIVILL TECH LLP",
+            "inLanguage": "en-IN",
+            "dateModified": "2026-10-05",
+            "isPartOf": {
+              "@id": "https://rovinsingh.com/#website"
+            },
+            "mainEntity": {
+              "@id": "https://rovinsingh.com/#person"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://rovinsingh.com/#website",
+            "url": "https://rovinsingh.com/",
+            "name": "Rovin Singh",
+            "inLanguage": "en-IN",
+            "publisher": {
+              "@id": "https://rovinsingh.com/#person"
+            }
+          },
+          {
             "@type": "Person",
             "@id": "https://rovinsingh.com/#person",
             "name": "Rovin Singh",
             "url": "https://rovinsingh.com/",
-            "image": "https://rovinsingh.com/images/rovin-singh.jpeg",
-            "jobTitle": "Co-Founder, DIGIVILL TECH LLP",
-            "worksFor": { "@id": "https://rovinsingh.com/#digivill" },
-            "founder": [{ "@id": "https://rovinsingh.com/#digivill" }],
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://rovinsingh.com/images/rovin-singh.jpeg",
+              "width": 600,
+              "height": 600
+            },
+            "jobTitle": "Co-Founder",
+            "worksFor": {
+              "@id": "https://rovinsingh.com/#digivill"
+            },
             "description": "Co-Founder of DIGIVILL TECH LLP, founder of SarkariJob.com, MyRTOBuddy.com and DigiIDNow.com, former BSF personnel and government exam mentor.",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Chandauli",
               "addressRegion": "Uttar Pradesh",
-              "addressCountry": "India"
+              "addressCountry": "IN"
             },
             "alumniOf": {
               "@type": "CollegeOrUniversity",
@@ -46,10 +76,20 @@
                 "@type": "PostalAddress",
                 "addressLocality": "Varanasi",
                 "addressRegion": "Uttar Pradesh",
-                "addressCountry": "India"
+                "addressCountry": "IN"
               }
             },
-            "knowsAbout": ["Government Jobs", "SSC Examinations", "Railway Recruitment", "Competitive Exam Preparation", "RTO and Vehicle Services", "Identity Documents", "Content Writing", "SEO", "Digital Publishing"],
+            "knowsAbout": [
+              "Government Jobs",
+              "SSC Examinations",
+              "Railway Recruitment",
+              "Competitive Exam Preparation",
+              "RTO and Vehicle Services",
+              "Identity Documents",
+              "Content Writing",
+              "SEO",
+              "Digital Publishing"
+            ],
             "sameAs": [
               "https://x.com/rovinsinghs",
               "https://www.instagram.com/rovins._",
@@ -62,7 +102,48 @@
             "@id": "https://rovinsingh.com/#digivill",
             "name": "DIGIVILL TECH LLP",
             "foundingDate": "2024",
-            "founder": { "@id": "https://rovinsingh.com/#person" }
+            "founder": {
+              "@id": "https://rovinsingh.com/#person"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/digivill/"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "name": "SarkariJob.com",
+            "url": "https://www.sarkarijob.com/",
+            "description": "Government job notifications and exam updates.",
+            "creator": {
+              "@id": "https://rovinsingh.com/#person"
+            },
+            "publisher": {
+              "@id": "https://rovinsingh.com/#digivill"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "name": "MyRTOBuddy.com",
+            "url": "https://myrtobuddy.com/",
+            "description": "RTO and vehicle-related information.",
+            "creator": {
+              "@id": "https://rovinsingh.com/#person"
+            },
+            "publisher": {
+              "@id": "https://rovinsingh.com/#digivill"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "name": "DigiIDNow.com",
+            "url": "https://digiidnow.com/",
+            "description": "Aadhaar, PAN, Voter ID and Passport services.",
+            "creator": {
+              "@id": "https://rovinsingh.com/#person"
+            },
+            "publisher": {
+              "@id": "https://rovinsingh.com/#digivill"
+            }
           }
         ]
       }

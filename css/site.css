@@ -66,7 +66,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
 
 /* Profile hero */
 .profile { display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: center; margin-top: 8px; padding: 36px; }
-.profile .photo { width: 156px; height: 156px; border-radius: 18px; object-fit: cover; object-position: center 20%; }
+.profile .photo { width: 156px; height: 156px; border-radius: 18px; object-fit: cover; }
 .profile h1 { font-size: 32px; font-weight: 700; letter-spacing: -.03em; margin: 0 0 4px; }
 .profile .sub { font-size: 16px; }
 .profile .chips { margin-top: 16px; }
@@ -149,7 +149,7 @@ a.venture:hover { border-color: #cbd5e1; }
 .article-head h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; line-height: 1.22; letter-spacing: -.03em; }
 .deck { margin-top: 14px; font-size: 1.08rem; }
 .byline { display: flex; align-items: center; gap: 12px; margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); }
-.byline img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; object-position: center 20%; }
+.byline img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
 .byline a { color: var(--ink); font-weight: 600; text-decoration: none; }
 .byline .role { font-size: 13.5px; color: var(--accent); font-weight: 500; }
 .byline .meta { font-size: 13px; color: var(--muted); }
@@ -202,7 +202,7 @@ a.venture:hover { border-color: #cbd5e1; }
 .note svg { flex: 0 0 18px; width: 18px; height: 18px; margin-top: 3px; color: var(--accent); }
 .note strong { color: var(--ink); }
 .author { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; padding: 22px; }
-.author img { width: 84px; height: 84px; border-radius: 16px; object-fit: cover; object-position: center 20%; }
+.author img { width: 84px; height: 84px; border-radius: 16px; object-fit: cover; }
 .author .kick { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .author h3 { font-size: 18px; margin: 2px 0; }
 .author .role { color: var(--accent); font-size: 14px; font-weight: 600; }

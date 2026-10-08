@@ -59,10 +59,7 @@ em, i, cite, address, dfn, var { font-style: normal; }
 /* Cards & sections */
 .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
 .section { padding-top: 48px; }
-.section > h2, .sec-head h2 { font-size: 20px; margin-bottom: 16px; }
-.sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
-.sec-head a { font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; }
-.sec-head a:hover { text-decoration: underline; }
+.section > h2 { font-size: 20px; margin-bottom: 16px; }
 
 /* Profile hero */
 .profile { display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: center; margin-top: 8px; padding: 36px; }
@@ -85,25 +82,18 @@ a.venture:hover { border-color: #cbd5e1; }
 .venture small { color: var(--accent); font-size: 12.5px; font-weight: 600; }
 .venture p { margin-top: 4px; font-size: 14px; }
 .venture .ext { margin-left: auto; color: var(--muted); font-size: 14px; }
-.venture .ext-li { flex: 0 0 auto; color: #0a66c2; }
-.venture .ext-li svg { width: 18px; height: 18px; display: block; }
 
-/* About + facts */
+/* About */
 .about { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; align-items: stretch; }
 .about .text { padding: 24px; display: grid; gap: 14px; }
 .about .text strong { color: var(--ink); font-weight: 600; }
-.facts { padding: 6px 22px; }
-.fact { display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
-.fact:last-child { border-bottom: 0; }
-.fact .ico { flex: 0 0 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); }
-.fact .ico svg { width: 17px; height: 17px; }
-.fact b { display: block; color: var(--ink); font-size: 14.5px; font-weight: 600; }
-.fact span { font-size: 13.5px; color: var(--muted); }
+.about-note { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border: 1px solid #99f6e4; border-left: 4px solid var(--accent); border-radius: 12px; background: var(--accent-soft); color: var(--ink); font-weight: 500; line-height: 1.55; }
+.about-note svg { flex: 0 0 18px; width: 18px; height: 18px; margin-top: 3px; color: var(--accent); }
 
 /* Journey */
 .journey { padding: 8px 24px; }
 .journey ol { list-style: none; margin: 0; padding: 0; }
-.journey li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.journey li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 0; font-size: 14.5px; border-bottom: 1px solid var(--line); }
 .journey li:last-child { border-bottom: 0; }
 .journey .yr { color: var(--ink); font-weight: 700; }
 .journey li.now .yr { color: var(--accent); }
@@ -118,6 +108,7 @@ a.venture:hover { border-color: #cbd5e1; }
 .topic .more:hover { text-decoration: underline; }
 
 /* Article teaser */
+.post-list { display: grid; gap: 12px; }
 .post { display: flex; gap: 20px; align-items: center; padding: 22px 24px; text-decoration: none; color: inherit; transition: border-color .15s; }
 .post > div { flex: 1; }
 .post:hover { border-color: #cbd5e1; }
@@ -128,10 +119,13 @@ a.venture:hover { border-color: #cbd5e1; }
 .post .arrow { flex: 0 0 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line); color: var(--link); }
 .post .arrow svg { width: 18px; height: 18px; }
 
-/* Contact */
-.contact { padding: 28px; }
-.contact blockquote { margin: 0; padding-left: 16px; border-left: 3px solid var(--accent); color: var(--ink); font-size: 18px; line-height: 1.5; }
-.contact cite { display: block; margin-top: 8px; font-size: 14px; font-style: normal; color: var(--muted); }
+/* Quote */
+.quote { position: relative; overflow: hidden; margin: 0; padding: 44px 32px 40px; text-align: center; border-color: #99f6e4; background: linear-gradient(135deg, var(--accent-soft) 0%, #ffffff 55%, var(--accent-soft) 100%); }
+.quote::before, .quote::after { content: ""; position: absolute; width: 180px; height: 180px; border-radius: 50%; background: radial-gradient(circle, rgba(15, 118, 110, .08), transparent 70%); pointer-events: none; }
+.quote::before { top: -70px; left: -60px; }
+.quote::after { bottom: -80px; right: -50px; }
+.quote-mark { position: relative; display: block; width: 40px; height: 40px; margin: 0 auto 14px; color: var(--accent); opacity: .85; }
+.quote blockquote { position: relative; max-width: 34ch; margin: 0 auto; font-family: var(--heading); font-size: clamp(1.15rem, 2.6vw, 1.45rem); font-weight: 600; line-height: 1.45; letter-spacing: -.01em; color: var(--ink); }
 
 /* Footer */
 .site-footer { margin-top: 56px; padding: 24px 0 36px; border-top: 1px solid var(--line); }
@@ -190,14 +184,6 @@ a.venture:hover { border-color: #cbd5e1; }
 .faq details p { margin-top: 6px; font-size: 15px; }
 
 .after { margin-top: 24px; display: grid; gap: 18px; }
-.tags h3, .share > span { font-size: 12.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.tags h3 { margin-bottom: 10px; }
-.tags div { display: flex; flex-wrap: wrap; gap: 8px; }
-.tags div span { padding: 5px 10px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); font-size: 13px; }
-.share { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-.share > span { margin-right: 4px; }
-.share a, .share button { padding: 7px 12px; border: 1px solid var(--line); border-radius: 9px; background: #fff; color: var(--ink); font: inherit; font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; }
-.share a:hover, .share button:hover { border-color: #cbd5e1; }
 .note { display: flex; gap: 10px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; font-size: 14.5px; }
 .note svg { flex: 0 0 18px; width: 18px; height: 18px; margin-top: 3px; color: var(--accent); }
 .note strong { color: var(--ink); }
@@ -233,7 +219,7 @@ a.venture:hover { border-color: #cbd5e1; }
     .post { padding: 18px 20px; }
     .post { gap: 14px; }
     .post .arrow { flex-basis: 34px; height: 34px; }
-    .contact { padding: 22px; }
+    .quote { padding: 34px 20px 30px; }
     .about .text, .journey { padding-left: 20px; padding-right: 20px; }
     .article-head { padding: 22px; }
     .narrow, .wrap { padding: 0 16px; }

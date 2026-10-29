@@ -83,6 +83,17 @@ a.venture:hover { border-color: #cbd5e1; }
 .venture p { margin-top: 4px; font-size: 14px; }
 .venture .ext { margin-left: auto; color: var(--muted); font-size: 14px; }
 
+/* Work showcase */
+.work-grid { align-items: stretch; }
+.work-card { height: 100%; padding: 22px; }
+.work-card > div { min-width: 0; }
+.work-card p { margin-top: 8px; font-size: 14px; line-height: 1.65; }
+.work-logo { background: var(--accent); font-size: 12px; letter-spacing: -.02em; }
+.work-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; color: var(--link); font-size: 13.5px; font-weight: 700; }
+a.work-card:hover { border-color: #99f6e4; }
+a.work-card:hover .work-link { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 680px) { .work-card { padding: 18px; } }
+
 /* About */
 .about { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; align-items: stretch; }
 .about .text { padding: 24px; display: grid; gap: 14px; }

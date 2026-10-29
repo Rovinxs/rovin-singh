@@ -236,6 +236,74 @@ a.work-card:hover .work-link { text-decoration: underline; text-underline-offset
 .notfound .actions { justify-content: center; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 
+/* Mobile usability and accessibility polish */
+html { scroll-padding-top: 88px; }
+section[id], main[id] { scroll-margin-top: 88px; }
+a, button, summary { touch-action: manipulation; }
+a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+    outline: 3px solid #0f766e;
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+.nav-links a, .socials a { min-height: 44px; }
+.socials a { min-width: 44px; }
+.post, .venture { min-width: 0; }
+.post > div, .venture > div { overflow-wrap: anywhere; }
+img { height: auto; }
+@media (max-width: 560px) {
+    .nav .wrap {
+        height: auto;
+        min-height: 64px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 6px;
+    }
+    .brand-name { display: inline; }
+    .nav-links {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -4px;
+    }
+    .nav-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 8px 10px;
+        font-size: 13.5px;
+    }
+    .profile { padding: 20px; }
+    .profile .sub { font-size: 15.5px; }
+    .chips { gap: 6px; }
+    .chip { padding: 6px 9px; }
+    .actions { gap: 8px; }
+    .btn { min-height: 44px; justify-content: center; }
+    .socials { margin-left: 0; }
+    .section { padding-top: 36px; }
+    .post { align-items: flex-start; padding: 18px; gap: 10px; }
+    .post h3 { font-size: 17px; }
+    .post p { font-size: 14px; }
+    .post .arrow { flex-basis: 36px; width: 36px; height: 36px; }
+    .work-card { gap: 10px; }
+    .site-footer .wrap { flex-direction: column; }
+}
+@media (max-width: 360px) {
+    .wrap, .narrow { padding-left: 12px; padding-right: 12px; }
+    .nav-links a { padding-left: 7px; padding-right: 7px; font-size: 12.5px; }
+    .profile { padding: 16px; }
+    .post { padding: 15px; }
+    .post .arrow { flex-basis: 32px; width: 32px; height: 32px; }
+}
+@media (forced-colors: active) {
+    a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+        outline: 2px solid Highlight;
+    }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 820px) {
     .about { grid-template-columns: 1fr; }

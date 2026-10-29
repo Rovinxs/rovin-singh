@@ -163,6 +163,11 @@ a.work-card:hover .work-link { text-decoration: underline; text-underline-offset
 .site-footer a { color: var(--muted); text-decoration: none; }
 .site-footer a:hover { color: var(--ink); }
 
+/* Trust and transparency notes */
+.trust-note { align-items: flex-start; border-color: #99f6e4; border-left: 3px solid var(--accent); background: var(--accent-soft); color: var(--body); }
+.trust-note strong { color: var(--ink); }
+.trust-note svg { color: var(--accent); }
+
 /* ---------- Article ---------- */
 .article-head { margin-top: 8px; padding: 32px; }
 .crumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: 13.5px; color: var(--muted); margin-bottom: 16px; }

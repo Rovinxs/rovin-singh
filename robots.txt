@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://rovinsingh.com/sitemap.xml
+Sitemap: https://rovinsingh.pages.dev/sitemap.xml
